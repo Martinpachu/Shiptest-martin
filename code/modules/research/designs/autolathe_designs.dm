@@ -1183,6 +1183,14 @@
 	build_path = /obj/item/ammo_box/magazine/zip_ammo_9mm
 	category = list("hacked", "Security")
 
+/datum/design/zip_ammo_9mm
+	name = "Surplus 12 Gauge Buckshot"
+	id = "12gsurplus"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 40000)
+	build_path = /obj/item/ammo_box/a12g/surplus
+	category = list("initial", "Security", "Ammo")
+
 /datum/design/pipedispenser
 	name = "Pipe Dispenser (Machine Board)"
 	id = "pipedispenser"

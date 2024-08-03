@@ -212,6 +212,14 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	max_ammo = 25
 
+/obj/item/ammo_box/a12g/surplus
+	name = "ammo box (12g buckshot surplus)"
+	desc = "A box of low quality 12-gauge buckshot shells, still quite devastating at close range."
+	icon_state = "12gbox-buckshot"
+	ammo_type = /obj/item/ammo_casing/shotgun/improvised
+	max_ammo = 25
+
+
 /obj/item/ammo_box/a12g/slug
 	name = "ammo box (12g slug)"
 	desc = "A box of 12-gauge slugs, for improved accuracy and penetration."

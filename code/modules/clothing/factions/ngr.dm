@@ -95,6 +95,7 @@
 	icon = 'icons/obj/clothing/faction/ngr/suits.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/ngr/suits.dmi'
 	blood_overlay_type = "armor"
+	armor = list("melee" = 35, "bullet" = 40, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50) // 5. additional. bullet armor.
 
 /obj/item/clothing/suit/armor/ngr/lieutenant
 	name = "\improper 2nd Battlegroup overcoat"
@@ -272,3 +273,11 @@
 		new /obj/item/ammo_box/magazine/m556_42_hydra(src)
 	new /obj/item/ammo_casing/a40mm(src)
 	new /obj/item/ammo_casing/a40mm(src)
+
+/obj/item/storage/belt/mining/ngr
+	name = "NGR industrial webbing"
+	desc = "A set of industrial webbing used primarily by salvagers of the New Gorlex Republic, capable of holding mining equipment."
+	icon_state = "ngr_webbing_tan"
+	item_state = "ngr_webbing_tan"
+	icon = 'icons/obj/clothing/faction/ngr/belt.dmi'
+	mob_overlay_icon = 'icons/mob/clothing/faction/ngr/belt.dmi'

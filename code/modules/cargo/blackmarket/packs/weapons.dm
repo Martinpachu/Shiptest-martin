@@ -42,6 +42,32 @@
 	stock_max = 3
 	availability_prob = 30
 
+/datum/blackmarket_item/weapon/blastinghammer
+	name = "Blasting Hammer"
+	desc = "Have you ever thought: \"Man, my 20 pound sledgehammer isn't crushing skulls well enough.\" No? Well, our friends in the Ramzi Clique have solved this issue anyways and made it everyone else's problem. This baby loads 12g blanks as propollent to really make that swing a home run. Just don't put a live shell in, yeah?"
+	item = /obj/item/storage/backpack/duffelbag/syndie
+
+	cost_min = 4000
+	cost_max = 6000
+	stock = 1
+	availability_prob = 15
+	spawn_weighting = FALSE
+
+/datum/blackmarket_item/weapon/blastinghammer/spawn_item(loc)
+	var/obj/item/storage/backpack/duffelbag/syndie/B = ..()
+	new /obj/item/gun/ballistic/shotgun/blasting_hammer(B)
+	new /obj/item/storage/box/ammo/a12g_blank(B)
+	return B
+/datum/blackmarket_item/weapon/spikeshield
+	name = "Spiked Ballistic Shield"
+	desc = "Be the ancient warrior you always wanted to be. Block bullets and impale your enemies."
+	item = /obj/item/shield/riot/spike
+
+	cost_min = 1000
+	cost_max = 1500
+	stock_max = 2
+	availability_prob = 50
+
 /datum/blackmarket_item/weapon/powerfist
 	name = "Powerfist"
 	desc = "Need a bit more... omph in your right hook? This gas operated powerfist will put you in the heavyweight."
@@ -50,6 +76,16 @@
 	cost_max = 4000
 	stock_max = 2
 	availability_prob = 50
+
+/datum/blackmarket_item/weapon/cutlass
+	name = "Gezenan Boarding Cutlass"
+	desc = "A mass produced fighting blade fresh from the belt of some poor sailor. It's got some mean weight to it."
+	item = /obj/item/storage/belt/sabre/pgf
+
+	cost_min = 1000
+	cost_max = 1750
+	stock = 1
+	availability_prob = 25
 
 /datum/blackmarket_item/weapon/sabre
 	name = "SUNS Dueling Sabre"
@@ -337,21 +373,10 @@
 	stock_max = 3
 	availability_prob = 30
 
-/datum/blackmarket_item/weapon/guncase/proto_gauss
-	name = "Prototype Gauss Rifle"
-	desc = "A prototype gauss rifle made by Nanotrasen. Perfect for making swiss cheese out of people. Chambered in ferromagnetic pellets."
-	item = /obj/item/gun/ballistic/automatic/powered/gauss
-	pair_item = list(/datum/blackmarket_item/ammo/proto_gauss_mag)
-
-	cost_min = 1500
-	cost_max = 3500
-	stock = 2
-	availability_prob = 25
-
 /datum/blackmarket_item/weapon/guncase/cycler
 	name = "Cycler Shotgun"
 	desc = "Perpetuate the cycle of violence with this dual feed shotgun! Has two built in 4 shell magazine tubes that can be swapped at the press of a button!"
-	item = /obj/item/gun/ballistic/shotgun/automatic/dual_tube
+	item = /obj/item/gun/ballistic/shotgun/automatic/negotiator
 	gun_unloaded = FALSE
 	mag_number = 0
 
@@ -381,6 +406,16 @@
 	stock_max = 3
 	availability_prob = 50
 
+/datum/blackmarket_item/weapon/guncase/mauler/semi
+	name = "Mauler Semi-Automatic"
+	desc = "Enjoy the Mauler, but want to actually hit the broadside of a Vela? This semi-automatic conversion of the Mauler still features a better than average rate of fire and improved handling.."
+	item = /obj/item/gun/ballistic/automatic/pistol/mauler/regular
+
+	cost_min = 500
+	cost_max = 1000
+	stock_max = 3
+	availability_prob = 50
+
 /datum/blackmarket_item/weapon/guncase/spitter
 	name = "Spitter Submachine Gun"
 	desc = "The aptly named Spitter won't be hitting anything outside of spitting distance. Anything in that range on the otherhand? Let's just say the bereaved will be wanting a closed casket funeral. Chambered in 9x18mm."
@@ -403,6 +438,40 @@
 	cost_max = 2000
 	stock = 1
 	availability_prob = 35
+
+/datum/blackmarket_item/weapon/guncase/cottonmouth
+	name = "MP-84m Cottonmouth Machinepistol"
+	desc = "Ramzi suppliers been rechambering a buncha Rattlesnakes into 10x22mm. Ol' nine ain't cutting it anymore. Kicks a liiiiiiittle bit worse aaaand it's just a two burst, but it'll suit ya well."
+	item = /obj/item/gun/ballistic/automatic/pistol/rattlesnake/cottonmouth
+	pair_item = list(/datum/blackmarket_item/ammo/cottonmouth)
+
+	cost_min = 1500
+	cost_max = 2250
+	stock_min = 1
+	stock_max = 2
+	availability_prob = 30
+
+/datum/blackmarket_item/weapon/guncase/f3
+	name = "F3 Marksman Rifle"
+	desc = "Let's bring it back old school. These vintage marksman rifles were the predecessor to the F4, but that doesn't make them any less deadly. After all, 3 is closer to number 1! Chambered in .308."
+	item = /obj/item/gun/ballistic/automatic/marksman/f4/indie
+	pair_item = list(/datum/blackmarket_item/ammo/f4_magazine)
+
+	cost_min = 3100
+	cost_max = 3900
+	stock_max = 2
+	availability_prob = 20
+	spawn_weighting = FALSE
+
+/datum/blackmarket_item/weapon/guncase/wasp
+	name = "Wasp Laser SMG"
+	desc = "Float like a butterfly, sting like a... well, a Wasp. A couple of our old E-40s finally gave the ghost, but we made lemonade and converted the laser modules into compact SMGs."
+	item = /obj/item/gun/energy/laser/wasp
+
+	cost_min = 1500
+	cost_max = 2500
+	stock_max = 2
+	availability_prob = 25
 
 /datum/blackmarket_item/weapon/guncase/polymer
 	name = "Polymer Survivor Rifle"
@@ -465,16 +534,6 @@
 
 /// mecha equipment
 
-/datum/blackmarket_item/weapon/mecha_weapon_bay
-	name = "Concealed Weapons Bay"
-	desc = "Ripley with a laser cannon? 200 Series with a missile rack? Sky's the limit with this omni-compatible weapons bay! (Missiles and lasers not included)"
-	item = /obj/item/mecha_parts/weapon_bay/concealed
-
-	cost_min = 1000
-	cost_max = 2000
-	stock_max = 3
-	availability_prob = 20
-
 /datum/blackmarket_item/weapon/mecha_syringe_gun
 	name = "Mounted Syringe Gun"
 	desc = "We ripped this off an old Cybersun exosuit. It's a real advanced piece of equipment. Exosuit not included."
@@ -496,3 +555,4 @@
 	cost_max = 3000
 	stock_max = 2
 	availability_prob = 25
+

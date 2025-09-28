@@ -2,7 +2,7 @@
 	name = "\improper Moth"
 	id = SPECIES_MOTH
 	default_color = "00FF00"
-	species_traits = list(LIPS, NOEYESPRITES, TRAIT_ANTENNAE, HAIR, EMOTE_OVERLAY)
+	species_traits = list(LIPS, NOEYESPRITES, TRAIT_ANTENNAE, HAIR, EMOTE_OVERLAY, HAS_FLESH, HAS_BONE)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_BUG
 	mutant_bodyparts = list("moth_wings", "moth_fluff", "moth_markings")
 	default_features = list("moth_wings" = "Plain", "moth_fluff" = "Plain", "moth_markings" = "None", "body_size" = "Normal")
@@ -29,6 +29,12 @@
 	species_r_arm = /obj/item/bodypart/r_arm/moth
 	species_l_leg = /obj/item/bodypart/leg/left/moth
 	species_r_leg = /obj/item/bodypart/leg/right/moth
+
+	species_robotic_chest = /obj/item/bodypart/chest/robot/human
+	species_robotic_l_arm = /obj/item/bodypart/l_arm/robot/surplus/human
+	species_robotic_r_arm = /obj/item/bodypart/r_arm/robot/surplus/human
+	species_robotic_l_leg = /obj/item/bodypart/leg/left/robot/surplus/human
+	species_robotic_r_leg = /obj/item/bodypart/leg/right/robot/surplus/human
 
 	min_temp_comfortable = HUMAN_BODYTEMP_NORMAL - 5
 	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 5
